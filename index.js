@@ -2,6 +2,7 @@
 
 const gaze = require('gaze');
 const program = require('commander');
+const debug = require('debug')('index');
 const pkg = require('./package.json');
 const exec = require('child_process').exec;
 
@@ -16,13 +17,20 @@ if (!program.files || !program.run) {
     process.exit();
 }
 
+debug('files', program.files);
+debug('run', program.run);
+
 gaze(program.files.split(';'), (err, watcher) => {
+    debug('start success', watcher.relative());
     watcher.on('all', (evt, filepath) => {
+        debug('file changed', filepath);
         exec(program.run, (err, stdout, stderr) => {
             if (err) {
+                debug('cmd run error');
                 console.error(`exec error: ${err}`);
                 return;
             }
+            debug('cmd run done');
             process.stdout.write(stdout);
             process.stderr.write(stderr);
         });
