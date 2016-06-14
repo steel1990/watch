@@ -7,7 +7,7 @@ const exec = require('child_process').exec;
 
 program
     .version(pkg.version)
-    .option('-f, --files [value]', 'glob files pattern')
+    .option('-f, --files [value]', 'glob files pattern，多个使用;分隔')
     .option('-r, --run [value]', 'run command white file changed')
     .parse(process.argv);
 
@@ -16,7 +16,7 @@ if (!program.files || !program.run) {
     process.exit();
 }
 
-gaze(program.files, (err, watcher) => {
+gaze(program.files.split(';'), (err, watcher) => {
     watcher.on('all', (evt, filepath) => {
         exec(program.run, (err, stdout, stderr) => {
             if (err) {
