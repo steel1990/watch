@@ -1,6 +1,6 @@
 {
-  "name": "watch",
-  "version": "1.0.0",
+  "name": "cli-watch",
+  "version": "1.0.1",
   "description": "A file watch command line tool for run shell while file changed.",
   "main": "index.js",
   "bin": {
