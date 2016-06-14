@@ -1,0 +1,29 @@
+{
+  "name": "watch",
+  "version": "1.0.0",
+  "description": "A file watch command line tool for run shell while file changed.",
+  "main": "index.js",
+  "bin": {
+    "watch": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steel1990/watch.git"
+  },
+  "keywords": [
+    "watch"
+  ],
+  "author": "lbbsteel@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steel1990/watch/issues"
+  },
+  "homepage": "https://github.com/steel1990/watch#readme",
+  "dependencies": {
+    "commander": "~2.9.0",
+    "gaze": "~1.0.0"
+  }
+}
