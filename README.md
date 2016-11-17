@@ -12,7 +12,7 @@ This command will watch `a.js`, and run `uglifyjs a.js -o b.js` when it changed.
 
 You can use glob patterns for the files param, such as:
 
-`watch -f *.js -r 'uglifyjs ${p} -o ${n}.min.js'`
+`watch -f '*.js' -r 'uglifyjs ${p} -o ${n}.min.js'`
 
 
 ### Options
