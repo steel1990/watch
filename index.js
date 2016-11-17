@@ -33,10 +33,9 @@ function run(changedPath) {
         debug('run', 'Dont run the cmd because of it need changed file path');
         return;
     }
-    debug('run', cmd);
+    console.log('Running:', cmd);
     shell.exec(cmd);
     debug('run', 'end');
-    console.log('shell run end');
 }
 
 if (!program.dontRunWhileStart) {
