@@ -1,6 +1,6 @@
 {
   "name": "cli-watch",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A file watch command line tool for run shell while file changed.",
   "main": "index.js",
   "bin": {
@@ -24,7 +24,7 @@
   "homepage": "https://github.com/steel1990/watch#readme",
   "dependencies": {
     "commander": "~2.9.0",
-    "debug": "~2.2.0",
+    "debug": "^3.1.0",
     "gaze": "^1.1.2",
     "shelljs": "^0.7.5"
   }
